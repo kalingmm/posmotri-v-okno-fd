@@ -86,6 +86,7 @@ ol {
   justify-content: space-between;
   width: 100%;
 }
+
 .search-form__fieldset {
   border: none;
   display: flex;
@@ -117,7 +118,7 @@ ol {
   background-color: transparent;
   border: none;
   border-top: 1px solid white;
-  border-bottom: 1px solid white;
+  border-bottom: 1px solid currentColor;
 }
 
 .search-form__checkbox-list {
@@ -155,7 +156,7 @@ ol {
   font-size: inherit;
   color: #fff;
   background-color: transparent;
-  border: 1px solid #fff;
+  border: 1px solid currentColor;
   padding: 6px 20px;
   cursor: pointer;
   align-self: end;
@@ -216,6 +217,10 @@ ol {
   margin: 2px;
 }
 
+.content__card-link:active {
+  background-color: #545050;
+}
+
 .content__card-link {
   display: block;
   text-decoration: none;
@@ -266,10 +271,10 @@ ol {
 }
 
 .content__video-card-description {
-  font-family: "Fira Sans Condensed", sans-serif;
-  font-size: 18px;
-  font-weight: 400;
-  line-height: 0.9;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 4;
+  line-clamp: 4;
   overflow: hidden;
 }
 
