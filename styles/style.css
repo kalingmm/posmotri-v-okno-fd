@@ -114,7 +114,7 @@ ol {
   border: none;
   border-top: 1px solid #fff;
   border-bottom: 1px solid #fff;
-  color: rgb(255 255 255 / 0.7);
+  color: #ffffff;
   font-weight: 400;
   font-style: normal;
   line-height: normal;
@@ -202,7 +202,6 @@ ol {
   gap: 26px;
   align-self: flex-start;
   inline-size: 100%;
-  min-block-size: 534px;
   min-inline-size: 399px;
 }
 
@@ -219,9 +218,9 @@ ol {
 }
 
 .content__list {
-  max-block-size: 298px;
-  position: relative;
-  overflow: auto;
+block-size: 298px;
+position: relative;
+overflow: auto;
 }
 
 .content__list-item:not(:last-child) {
@@ -272,12 +271,16 @@ ol {
 }
 
 .content__video-card-title {
-  font-family: Oswald, Arial, Helvetica, sans-serif;
-  font-weight: 700;
-  font-size: 30px;
-  font-style: normal;
-  line-height: 100%;
-  text-transform: uppercase;
+  font-family: Oswald, Arial, Helvetica, sans-serif; 
+  font-weight: 700; 
+  font-size: 30px; 
+  font-style: normal; 
+  line-height: 100%; 
+  text-transform: uppercase; 
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  max-width: 196px ;
 }
 
 .content__video-card-description {
@@ -285,7 +288,12 @@ ol {
   font-weight: 400;
   font-size: 18px;
   font-style: normal;
-  line-height: 90%;
+  line-height: 16.2px;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 4;
+  line-clamp: 4;
+  overflow: hidden; 
 }
 
 .content__video-card-thumbnail {
